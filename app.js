@@ -10,7 +10,9 @@ const app = express();
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-// BODY PARSER MIDDLEWARE
+// =====================MIDDLEWARE======================
+
+// BODY-parser 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -22,8 +24,12 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+
 const port = process.env.PORT || 3000;
 
+
+
+// =============================L==========================
 app.listen(port, () => {
   console.log(`server is online on port ${port}`);
 });
