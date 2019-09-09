@@ -5,6 +5,17 @@
         Web Dev Ebook
       </h1>
       <p class="lead">Learn Font-End Dev</p>
+      <form action="/charge" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_5HHcMMUUhtne96IK4v7kVtyt00nOFJerO3" data-amount="2000" data-name="HSA Inc."
+          data-description="T-shirt design by HSA Inc." data-image="/img/img2.png" data-locale="auto">
+          </script>
+        {{!-- This is hide stripe button  --}}
+        <script>
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-dark text-white btn-lg">Purchase For $20</button>
+      </form>
     </div>
     <div class="col-md-6">
       <img src="/img/img1.jpg" alt="Book Img" class="img-fluid">
