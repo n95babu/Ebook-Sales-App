@@ -6,9 +6,9 @@
       </h1>
       <p class="lead">Learn Font-End Dev</p>
       <form action="/charge" method="POST">
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="pk_test_5HHcMMUUhtne96IK4v7kVtyt00nOFJerO3" data-amount="10000" data-name="HSA Inc."
-          data-description="For One Coney Island" data-image="/img/img2.png" data-locale="auto">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{stripePublishableKey}}"
+          data-amount="10000" data-name="HSA Inc." data-description="For One Coney Island" data-image="/img/img2.png"
+          data-locale="auto">
           </script>
         {{!-- This is hide stripe button  --}}
         <script>
