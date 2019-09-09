@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 
 // =====================MIDDLEWARE======================
 
-// BODY-parser 
+// BODY-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -24,10 +24,23 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Charge Route
+app.post('/charge', (req, res) => {
+  const amount = 10000;
+  stripe.customers.create({
+    email: req.body.stripeEmail,
+    source: req.body.stripeToken,
+  })
+    .then(customer => stripe.charges.create({
+      amount,
+      description: 'T-shirt design by HSA Inc.',
+      currency: 'usd',
+      customer: customer.id,
+    }))
+    .then(charge => res.render('success'));
+});
 
 const port = process.env.PORT || 3005;
-
-
 
 // =============================L==========================
 app.listen(port, () => {
