@@ -5,6 +5,7 @@ const stripe = require('stripe')(keys.stripeSecretKey);
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 
+const port = process.env.PORT || 3005;
 
 const app = express();
 
@@ -45,7 +46,6 @@ app.post('/charge', (req, res) => {
 });
 
 // =============================L==========================
-const port = process.env.PORT || 3005;
 app.listen(port, () => {
   console.log(`server is online on port ${port}`);
 });
