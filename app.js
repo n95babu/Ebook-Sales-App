@@ -5,9 +5,9 @@ const stripe = require('stripe')(keys.stripeSecretKey);
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 
-const port = process.env.PORT || 3005;
-
 const app = express();
+let server = require('http').Server(app);
+
 
 // HANDLEBARS MIDDLEWARE
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
@@ -46,6 +46,12 @@ app.post('/charge', (req, res) => {
 });
 
 // =============================L==========================
-app.listen(port, () => {
-  console.log(`server is online on port ${port}`);
+// app.listen(port, () => {
+//   console.log(`server is online on port ${port}`);
+// });
+
+const port = process.env.PORT || 3006;
+
+server.listen(port, () => {
+  console.log(`App is running on port ${port}`);
 });
