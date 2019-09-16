@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 
 const app = express();
-let server = require('http').Server(app);
+// let server = require('http').Server(app);
 
 
 // HANDLEBARS MIDDLEWARE
