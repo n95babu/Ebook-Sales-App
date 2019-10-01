@@ -50,8 +50,8 @@ app.post('/charge', (req, res) => {
 //   console.log(`server is online on port ${port}`);
 // });
 
-const port = process.env.PORT || 3006;
+const port = process.env.PORT || 3000;
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`App is running on port ${port}`);
 });
