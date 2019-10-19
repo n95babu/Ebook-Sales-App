@@ -1,5 +1,6 @@
 # Ebook-Sales-App
-Build With Stripe 
+Build using Stripe API
+Live Link  https://pure-brushlands-98817.herokuapp.com/
 
 ## Supporting Libraries
 
