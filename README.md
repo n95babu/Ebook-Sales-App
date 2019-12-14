@@ -1,4 +1,4 @@
-# Ebook-Sales-App
+# Stripe-Integration
 Build using Stripe API
 Live Link  https://pure-brushlands-98817.herokuapp.com/
 
